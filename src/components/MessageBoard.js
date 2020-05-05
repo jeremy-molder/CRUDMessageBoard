@@ -60,7 +60,7 @@ class MessageBoard extends Component {
   }
 
   apiUpdate(message){
-    let jsonMessage = "[{ message:"+message.state.message+"}]";
+    let jsonMessage = "[{ 'message': '"+message.state.message+"' }]";
     fetch(this.api+"/messages/"+message.state.id, {
       method: 'PUT',
       headers: {
